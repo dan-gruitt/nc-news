@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import SingleArticlePage from './pages/SingleArticlePage'
 import SearchBar from './components/SearchBar'
 import AllArticlesPage from './pages/AllArticlesPage'
+import SingleTopicPage from './pages/SingleTopicPage'
 
 function App() {
 
@@ -20,8 +21,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={< HomePage />} />
-        <Route path="/:article_id" element={ < SingleArticlePage />} />
-        <Route path="/articles" element={ < AllArticlesPage />} />
+        <Route path="/:article_id" element={< SingleArticlePage />} />
+        <Route path="/articles" element={< AllArticlesPage />} />
+        <Route path="/topics/:topics" element={<SingleTopicPage />} />
       </Routes>
     </div>
   )

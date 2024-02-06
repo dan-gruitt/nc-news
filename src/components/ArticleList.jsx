@@ -13,6 +13,8 @@ const ArticleList = () => {
             const topArticles = articles.splice(0, 6)
             setArticleList(topArticles)
             setIsLoading(false)
+        }).catch((err)=> {
+            console.log(err);
         })
     }, [])
 
