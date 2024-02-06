@@ -1,7 +1,14 @@
-const TopicList = () => {
-    return ( 
-        <h3>Im a topic List soon to be menu bar</h3>
-     );
+const TopicList = ({ topics }) => {
+
+    const topicLinks = topics.map((topic) => {
+        return <button key={topic.slug}>{topic.slug}</button>
+    })
+
+    return (
+        <ul className="topic-bar">
+            {topicLinks}
+        </ul>
+    );
 }
- 
+
 export default TopicList;

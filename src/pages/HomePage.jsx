@@ -1,6 +1,11 @@
+import ArticleList from "../components/ArticleList";
+
 const HomePage = () => {
     return ( 
-        <h2>Im the home page</h2>
+        <div>
+            < ArticleList />
+        </div>
+
      );
 }
  

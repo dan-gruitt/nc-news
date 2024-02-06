@@ -1,6 +1,6 @@
 const User = () => {
     return ( 
-        <p>Im the user</p>
+<></>
      );
 }
  
