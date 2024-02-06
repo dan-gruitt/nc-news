@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const TopicList = ({ topics }) => {
 
     const topicLinks = topics.map((topic) => {
-        return <button key={topic.slug}>{topic.slug}</button>
+        return <Link to={`/topics/${topic.slug}`}key={topic.slug}><button >{topic.slug}</button></Link>
     })
 
     return (
@@ -12,3 +14,5 @@ const TopicList = ({ topics }) => {
 }
 
 export default TopicList;
+
+

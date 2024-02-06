@@ -6,7 +6,6 @@ const ArticleCard = ({ articleList }) => {
 
 
     const listItems = articleList.map((article) => {
-        console.log(article.article_id, "<<<<<<< this");
         return <Link key={article.article_id} to={`/${article.article_id}`}>  <li className="card">
             <img className="" src={article.article_img_url} alt={`${article.author} image for Gruitt news`}/><br />
             <div className="container">
