@@ -19,7 +19,6 @@ const ArticleList = () => {
 
     return (
         <div>
-            <h2>Top Articles</h2>
             {isLoading ? (
                 <h2>...Loading</h2>
             ) : (
