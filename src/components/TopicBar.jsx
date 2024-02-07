@@ -9,6 +9,9 @@ const TopicBar = () => {
     useEffect(() => {
         getAllTopics().then(({ topics }) => {
             setTopics(topics)
+        }).catch((err)=> {
+            console.log(err, "DEAL WITH ERROR HERE");
+
         })
     }, [])
 

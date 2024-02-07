@@ -16,6 +16,8 @@ const SingleTopicPage = () => {
                 }
             })
             setArticlesByTopic(filteredTopics)
+        }).catch((err)=> {
+            console.log(err, "DEAL WITH ERROR HERE");
         })
     }, [articlesByTopic])
 
