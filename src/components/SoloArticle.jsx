@@ -17,6 +17,11 @@ const SoloArticle = ({ article_id }) => {
     }, [])
 
 
+    const handleClick = () => {
+        console.log("here");
+    }
+
+
     return (
 
         <>
@@ -33,7 +38,7 @@ const SoloArticle = ({ article_id }) => {
                         <p>{singleArticle.body}</p>
                         <h3>Written by: {singleArticle.author}</h3>
                         <p></p>
-                        <button>like</button>
+                        <button onClick={handleClick}>like</button>
                         <div>
                             Votes:{singleArticle.votes}
                         </div>
@@ -44,6 +49,9 @@ const SoloArticle = ({ article_id }) => {
 
 
     )
+
+
+    
 }
 
 export default SoloArticle;
