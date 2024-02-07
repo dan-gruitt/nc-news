@@ -14,6 +14,8 @@ const SingleArticlePage = () => {
         getArticleById(article_id).then(({ article }) => {
             setSingleArticle(article)
             setIsLoading(false)
+        }).catch((err)=> {
+            console.log(err, "DEAL WITH ERROR HERE");
         })
 
     }, [])
