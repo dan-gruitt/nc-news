@@ -12,6 +12,7 @@ const CommentList = ({ article_id }) => {
         getCommentsByArticleID(article_id).then(({ comments }) => {
             setComments(comments)
             setIsLoading(false)
+        }).catch((err)=> {
         })
     }, [article_id])
 
