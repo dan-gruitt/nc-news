@@ -1,24 +1,36 @@
 import { useEffect, useState } from "react";
 import { getArticleById } from "../utils/getArticleById";
+import { patchVotes } from "../utils/patchVotes";
+
 
 const SoloArticle = ({ article_id }) => {
 
     const [singleArticle, setSingleArticle] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
+    const [voteCount, setVoteCount] = useState()
+    const [err, setErr] = useState(null)
 
     useEffect(() => {
         getArticleById(article_id).then(({ article }) => {
             setSingleArticle(article)
+            setVoteCount(article.votes)
             setIsLoading(false)
         }).catch((err) => {
-            console.log(err, "DEAL WITH ERROR HERE");
+
         })
 
     }, [])
 
 
-    const handleClick = () => {
-        console.log("here");
+    const handleClick = (event) => {
+        event.preventDefault()
+        setVoteCount(voteCount + 1)
+        setErr(null)
+        patchVotes(article_id)
+            .catch((err) => {
+                setVoteCount(voteCount - 1)
+                setErr("Something went wrong, please try again")
+            })
     }
 
 
@@ -39,9 +51,16 @@ const SoloArticle = ({ article_id }) => {
                         <h3>Written by: {singleArticle.author}</h3>
                         <p></p>
                         <button onClick={handleClick}>like</button>
-                        <div>
-                            Votes:{singleArticle.votes}
-                        </div>
+                        {
+                            err
+                                ? <section className="error">
+                                    <p>{err}</p>
+                                </section>
+                                : <div>
+                                    Votes:{voteCount}
+                                </div>
+                        }
+
                     </article>
                 </section>
             )}
@@ -51,7 +70,7 @@ const SoloArticle = ({ article_id }) => {
     )
 
 
-    
+
 }
 
 export default SoloArticle;

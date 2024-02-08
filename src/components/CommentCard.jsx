@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 
 const CommentCard = ({ comments }) => {
 
-    // const [emptyComments, setEmptyComments] = useState(false)
+    // const [emptyComments, setEmptyComments] = useState(null)
 
-    // useEffect(()=> {
+    // useEffect(() => {
     //     if (comments.length < 1) { setEmptyComments(true) }
-    // },[])
+    // }, [])
 
-   
+
 
     const commentList = comments.map((com) => {
 
-        const [voteCount, setVoteCount] = useState(com.votes)
+        const [voteCount, setVoteCount] = useState(0)
 
         const handleClick = () => {
             setVoteCount(voteCount + 1)
@@ -29,9 +29,11 @@ const CommentCard = ({ comments }) => {
 
 
     return (
+        <div>
 
-        <ul>{commentList}</ul>
-    
+            <ul>{commentList}</ul>
+
+        </div>
     );
 }
 

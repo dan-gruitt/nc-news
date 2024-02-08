@@ -10,11 +10,9 @@ const CommentList = ({ article_id }) => {
 
     useEffect(() => {
         getCommentsByArticleID(article_id).then(({ comments }) => {
-     console.log(comments);
             setComments(comments)
             setIsLoading(false)
         }).catch((err)=> {
-            console.log(err, "error isnide use effect insode comment list");
         })
     }, [article_id])
 
