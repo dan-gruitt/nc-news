@@ -23,11 +23,15 @@ const SingleArticlePage = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        setNewComment(event.target[0].value)
-        postNewComment(article_id, newComment)
+        console.log(article_id, "<<< article id from handle submit");
+        console.log(newComment, "<<< new commentfrom handle submit");
+        postNewComment(article_id, newComment).catch((err) => {
+            console.log(err, "handle submit");
+            return err;
+        });
     }
 
-    
+
 
     return (
         <div>
