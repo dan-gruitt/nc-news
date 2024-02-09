@@ -6,7 +6,6 @@ import { postNewComment } from "../utils/postNewComment";
 
 
 
-
 const SingleArticlePage = () => {
     const { article_id } = useParams()
 
@@ -23,10 +22,7 @@ const SingleArticlePage = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(article_id, "<<< article id from handle submit");
-        console.log(newComment, "<<< new commentfrom handle submit");
         postNewComment(article_id, newComment).catch((err) => {
-            console.log(err, "handle submit");
             return err;
         });
     }
