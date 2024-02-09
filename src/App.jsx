@@ -8,6 +8,7 @@ import SearchBar from './components/SearchBar'
 import AllArticlesPage from './pages/AllArticlesPage'
 import SingleTopicPage from './pages/SingleTopicPage'
 
+
 function App() {
 
   return (

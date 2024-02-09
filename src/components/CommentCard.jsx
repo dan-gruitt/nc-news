@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 
 const CommentCard = ({ comments }) => {
 
-    // const [emptyComments, setEmptyComments] = useState(null)
 
-    // useEffect(() => {
-    //     if (comments.length < 1) { setEmptyComments(true) }
-    // }, [])
 
 
 
@@ -26,7 +22,9 @@ const CommentCard = ({ comments }) => {
             <button onClick={handleClick}>Like</button>
         </li>
     })
-
+    if (comments.length === 0) {
+        return <p>Sorry no comments</p>
+    }
 
     return (
         <div>
