@@ -21,7 +21,9 @@ const CommentCard = ({ comments }) => {
             <button onClick={handleClick}>Like</button>
         </li>
     })
-
+    if (comments.length === 0) {
+        return <p>Sorry no comments</p>
+    }
 
     return (
 
