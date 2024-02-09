@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import SoloArticle from "../components/SoloArticle";
 import CommentList from "../components/CommentList";
 import { useState } from "react";
+import { postNewComment } from "../utils/postNewComment";
 
 
 
@@ -23,12 +24,10 @@ const SingleArticlePage = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         setNewComment(event.target[0].value)
-        // setNewComment('')
+        postNewComment(article_id, newComment)
     }
 
-    console.log(newComment, "<<???");
-
-
+    
 
     return (
         <div>
@@ -40,9 +39,9 @@ const SingleArticlePage = () => {
                 addComment
                     ?
                     <form onSubmit={handleSubmit}>
-                        <textarea rows="4" cols="50" 
-                        value={newComment}
-                        onChange={(event)=> {setNewComment(event.target.value)}}>
+                        <textarea rows="4" cols="50"
+                            value={newComment}
+                            onChange={(event) => { setNewComment(event.target.value) }}>
                         </textarea>
                         <button>Submit</button>
                     </form>
@@ -50,7 +49,7 @@ const SingleArticlePage = () => {
                     : null
             }
 
-            < CommentList article_id={article_id} />
+            < CommentList article_id={article_id} newComment={newComment} />
 
         </div>
     )

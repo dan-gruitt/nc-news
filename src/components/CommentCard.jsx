@@ -2,10 +2,6 @@ import { useState } from "react";
 
 const CommentCard = ({ comments }) => {
 
-
-
-
-
     const commentList = comments.map((com) => {
 
         const [voteCount, setVoteCount] = useState(com.votes)
