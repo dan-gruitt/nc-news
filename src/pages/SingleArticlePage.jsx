@@ -27,7 +27,7 @@ const SingleArticlePage = () => {
         });
     }
 
-
+console.log(newComment, "<<<<");
 
     return (
         <div>
