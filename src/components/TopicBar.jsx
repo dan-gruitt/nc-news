@@ -17,7 +17,7 @@ const TopicBar = () => {
 
 
     return (
-        <div>
+        <div className="nav">
             < TopicList topics={topics} />
         </div>
 

@@ -27,31 +27,30 @@ const SingleArticlePage = () => {
         });
     }
 
-console.log(newComment, "<<<<");
 
     return (
-        <div>
-            < SoloArticle article_id={article_id} />
+        <main className="solo-main">
+        <><div>
+            <SoloArticle article_id={article_id} />
 
 
             <span><button onClick={handleClick}>Add comment</button></span><br />
-            {
-                addComment
-                    ?
-                    <form onSubmit={handleSubmit}>
-                        <textarea rows="4" cols="50"
-                            value={newComment}
-                            onChange={(event) => { setNewComment(event.target.value) }}>
-                        </textarea>
-                        <button>Submit</button>
-                    </form>
+            {addComment
+                ?
+                <form onSubmit={handleSubmit}>
+                    <textarea rows="4" cols="50"
+                        value={newComment}
+                        onChange={(event) => { setNewComment(event.target.value); } }>
+                    </textarea>
+                    <button>Submit</button>
+                </form>
 
-                    : null
-            }
-
-            < CommentList article_id={article_id} newComment={newComment} />
+                : null}
 
         </div>
+        <CommentList article_id={article_id} newComment={newComment} /></>
+
+        </main>
     )
 }
 

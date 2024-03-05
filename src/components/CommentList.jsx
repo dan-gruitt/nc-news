@@ -18,7 +18,7 @@ const CommentList = ({ article_id }) => {
 
 
     return (
-        <section className="comment-box">
+        <section>
             < CommentCard comments={comments} />
         </section>
 

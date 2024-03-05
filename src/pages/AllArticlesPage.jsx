@@ -1,7 +1,7 @@
 import ArticleList from "../components/ArticleList";
 
 const AllArticlesPage = () => {
-    console.log("Im here!");
+
     return (
         <>
             <div>

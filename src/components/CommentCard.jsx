@@ -15,7 +15,7 @@ const CommentCard = ({ comments }) => {
         }
 
 
-        return <li className="comment-card" key={com.comment_id} >
+        return <li key={com.comment_id} >
             <p>{com.body}</p>
             <p>{com.author}</p>
             <p><strong>{voteCount}</strong></p>
@@ -29,7 +29,7 @@ const CommentCard = ({ comments }) => {
     return (
         <div>
 
-            <ul>{commentList}</ul>
+       {commentList}
 
         </div>
     );

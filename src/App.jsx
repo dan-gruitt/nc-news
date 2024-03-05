@@ -15,9 +15,8 @@ function App() {
 
     <div className="App">
 
-      <header className='header'>
+      <header >
         < Header />
-        < SearchBar />
       </header>
 
       <Routes>

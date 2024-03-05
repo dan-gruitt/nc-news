@@ -41,14 +41,29 @@ const SoloArticle = ({ article_id }) => {
             {isLoading ? (
                 <h2>...Loading</h2>
             ) : (
-                <section className="single-article">
+                <section >
+
+
+
+
                     <div id="image-single-container">
                         <img className="article-image" src={singleArticle.article_img_url} alt={`${singleArticle.title} by ${singleArticle.author}`} />
                     </div>
+
+
+
+
+
+                    <div>
+                    <h2>{singleArticle.title}</h2>
+                    <p>Written by: {singleArticle.author}</p>
+                    </div>
+
+
+
                     <article className="single-article">
-                        <h2>{singleArticle.title}</h2>
+                        
                         <p>{singleArticle.body}</p>
-                        <h3>Written by: {singleArticle.author}</h3>
                         <p></p>
                         <button onClick={handleClick}>like</button>
                         {
