@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -17,14 +18,18 @@ body {
   width: 100%; /* Set the width to 100% */
 }
 
+.header-titles {
+  text-align: center;
+}
+
 .navigation {
-  background-color: rgb(246, 246, 246);
+  background-color: #f6f6f6;
   width: 100%;
 }
 
 ul {
-margin-top: 0;
-margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .topic-bar {
@@ -34,6 +39,10 @@ margin-bottom: 0;
   justify-content: flex-end; /* Align items to the right */
 }
 
+.topic-bar p {
+padding: 10px;
+}
+
 .topic-bar a {
   color: #000; /* Change the color as needed */
   margin: 0 10px; /* Adjust the margin between links */
@@ -41,14 +50,16 @@ margin-bottom: 0;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   transition: 0.3s;
   padding: 10px;
+
 }
 
+/* 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 
 .container {
   padding: 10px 16px;
@@ -70,7 +81,6 @@ margin-bottom: 0;
 }
 
 .testing {
-
   padding-left: 10px;
 }
 
@@ -79,7 +89,6 @@ margin-bottom: 0;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-
 }
 
 .solo-main {
@@ -110,9 +119,11 @@ margin-bottom: 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0;
   list-style: none;
+  padding: 15px;
 }
+
+
 
 li {
   width: 100%;
@@ -121,6 +132,63 @@ li {
 
 .card-image {
   width: 100%;
-  height: 250px; /* Adjust the height as needed */
+  height: 550px; /* Adjust the height as needed */
   object-fit: cover;
+  border-radius: 20px;
 }
+
+.heart {
+padding: 0;}
+
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.title-article {
+  margin-top: 10px;
+  background-color: #efefef;
+  border-radius: 20px;
+  padding: 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-main {
+  margin-top: 10px;
+  background-color: #fafafa;
+  border-radius: 20px;
+  padding: 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments {
+  margin-top: 30px;
+list-style: none;
+}
+
+.vote-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vote-card div {
+  margin: 10px;
+
+}
+
+.vote-card p {
+  align-items: center;
+}
+

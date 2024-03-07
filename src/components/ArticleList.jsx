@@ -5,6 +5,7 @@ import { getArticles } from "../utils/getArticles";
 
 const ArticleList = () => {
 
+
     const [ArticleList, setArticleList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 

@@ -1,16 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardMedia, Typography, CardActions, Button, CardContent } from "@mui/material";
+import { Card, CardMedia, Typography, CardActions, Button, CardContent, ThemeProvider } from "@mui/material";
+import themeButton from '../themes/themeButton'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 const ArticleCard = ({ articleList }) => {
   const listItems = articleList.map((article) => (
     <li key={article.article_id}>
-      <Card className="card">
-        {/* Set a fixed height and width for the CardMedia */}
+      <Card 
+      className="card">
         <CardMedia
           component="img"
           alt={`${article.author} image for Gruitt news`}
-          className="card-image" 
+          className="card-image"
           image={article.article_img_url}
         />
         <CardContent>
@@ -20,16 +26,24 @@ const ArticleCard = ({ articleList }) => {
           <Typography variant="body2">by {article.author}</Typography>
         </CardContent>
         <CardActions>
-          {/* Use the Link component directly inside the Button */}
-          <Button component={Link} to={`/${article.article_id}`} size="small">
-            Learn More
+          <Button
+          variant="contained"
+            component={Link}
+            to={`/${article.article_id}`}
+            size="small"
+            sx={{ bgcolor: 'grey.light' }}>
+            <Typography sx={{ color: 'grey.contrastText' }}>Learn More</Typography>
           </Button>
         </CardActions>
       </Card>
     </li>
   ));
 
-  return <ul className="card-list">{listItems}</ul>;
+  return (
+    <ThemeProvider theme={themeButton}>
+      <ul className="card-list">{listItems}</ul>
+    </ThemeProvider>
+  )
 };
 
 export default ArticleCard;

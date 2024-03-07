@@ -27,6 +27,10 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 1.5em;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -58,3 +62,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+

@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
 import ArticleList from "../components/ArticleList";
+import { Button } from "@mui/material";
 
 
 const HomePage = () => {
     return (
         <>
-            <div>
+            <div className="header-titles">
                 <h2>Top Articles</h2>
+                </div>
+                <section>
+               
                 < ArticleList />
-            </div>
+                </section>
+                
+            
             <section>
-                <Link to={"/articles"}><button>See All Articles</button></Link>
+                <Link to={"/articles"}><Button>See All Articles</Button></Link>
             </section>
         </>
     );
