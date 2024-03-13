@@ -7,7 +7,6 @@ export const patchVotes = (article_id) => {
       { inc_votes: +1 }
     )
     .catch((err) => {
-      console.log(err, "DEAL WITH ERROR HERE UTILS");
       return err;
     });
 };

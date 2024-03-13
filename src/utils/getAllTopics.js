@@ -6,7 +6,6 @@ export const getAllTopics = () => {
     .then(({data: topics}) => {
       return topics;
     }).catch((err)=> {
-      console.log(err, "DEAL WITH ERROR HERE UTILS");
       return err;
   })
 };

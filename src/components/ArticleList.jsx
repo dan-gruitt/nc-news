@@ -15,7 +15,6 @@ const ArticleList = () => {
             setArticleList(topArticles)
             setIsLoading(false)
         }).catch((err)=> {
-            console.log(err, "DEAL WITH ERROR HERE");
             return err;
         })
     }, [])

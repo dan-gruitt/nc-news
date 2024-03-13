@@ -9,7 +9,6 @@ export const getArticleById = (article_id) => {
       return articles;
     })
     .catch((err) => {
-      console.log(err, "DEAL WITH ERROR HERE UTILS");
       return err;
     });
 };

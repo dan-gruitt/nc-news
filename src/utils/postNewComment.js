@@ -7,7 +7,6 @@ export const postNewComment = (article_id, newComment) => {
       newCommentBody
     )
     .then((data) => {
-      console.log(data, "<<< inside post");
       return data;
     })
 };
