@@ -1,4 +1,4 @@
-# A fully responsive news app which displays articles and associated comments. 
+# A fully responsive news app built in React which displays articles and associated comments. 
 
 ## Features
 
